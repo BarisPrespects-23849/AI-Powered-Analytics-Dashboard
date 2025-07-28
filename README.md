@@ -1,147 +1,186 @@
-# AnaMas - AI-Powered Analytics Dashboard
+# 🚀 AnaMas – AI-Powered Analytics Dashboard
 
-A production-ready analytics dashboard with AI-powered insights, built with Next.js, TypeScript, and shadcn/ui.
+A modern, production-ready analytics dashboard delivering real-time metrics and intelligent insights. Built using **Next.js**, **TypeScript**, and **shadcn/ui**, with **Gemini AI** integration for actionable business recommendations.
 
-## 🚀 Features
+---
 
-- **Real-time Analytics**: Live data visualization with interactive charts
-- **AI-Powered Insights**: Intelligent business recommendations (OpenAI integration)
-- **Responsive Design**: Beautiful UI that works on all devices
-- **Production Ready**: Error boundaries, caching, and performance optimization
-- **Modular Architecture**: Reusable components and clean code organization
+## ✨ Features
 
-## 🛠️ Tech Stack
+* **📊 Real-Time Analytics** – Interactive, live data visualizations
+* **🧠 Gemini AI Insights** – Context-aware business recommendations via Gemini
+* **📱 Responsive UI** – Seamlessly adapts to all screen sizes
+* **⚙️ Production Ready** – Error boundaries, smart caching, lazy loading
+* **🧩 Modular Architecture** – Clean structure with reusable components
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **UI Components**: shadcn/ui
-- **Charts**: Recharts
-- **AI Integration**: Vercel AI SDK with OpenAI
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+---
 
-## 🏃‍♂️ Quick Start
+## 🛠 Tech Stack
 
-1. **Clone the repository**
-   \`\`\`bash
+| Category       | Tooling                  |
+| -------------- | ------------------------ |
+| Framework      | Next.js 14 (App Router)  |
+| Language       | TypeScript               |
+| UI Components  | shadcn/ui                |
+| Styling        | Tailwind CSS             |
+| Charts         | Recharts                 |
+| AI Integration | Gemini via Vercel AI SDK |
+| Icons          | Lucide React             |
+
+---
+
+## ⚡ Quick Start
+
+1. **Clone the Repository**
+
+   ```bash
    git clone <repository-url>
    cd anamas-dashboard
-   \`\`\`
+   ```
 
-2. **Install dependencies**
-   \`\`\`bash
+2. **Install Dependencies**
+
+   ```bash
    npm install
-   \`\`\`
+   ```
 
-3. **Run the development server**
-   \`\`\`bash
+3. **Run Development Server**
+
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+4. **Visit in Browser**
+   Open [http://localhost:3000](http://localhost:3000)
 
-## 🤖 AI Features Configuration (Optional)
+---
 
-AnaMas works perfectly without API keys using intelligent fallback insights. To enable full AI-powered analytics:
+## 🤖 Gemini AI Integration (Optional)
 
-1. **Get an OpenAI API Key**
-   - Visit [OpenAI Platform](https://platform.openai.com/api-keys)
-   - Create a new API key
+AnaMas works without API keys using default fallback logic. To unlock AI-powered analytics with **Gemini**:
+
+1. **Get a Gemini API Key**
+
+   * Visit [Google AI Studio](https://aistudio.google.com/app/apikey) and generate an API key
 
 2. **Configure Environment Variables**
-   Create a `.env.local` file in the root directory:
-   \`\`\`env
-   OPENAI_API_KEY=your_openai_api_key_here
-   \`\`\`
+   Create a `.env.local` file in the project root:
 
-3. **Restart the development server**
-   \`\`\`bash
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+3. **Restart Dev Server**
+
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
-## 📁 Project Structure
+---
 
-\`\`\`
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout with sidebar
-│   ├── page.tsx           # Dashboard overview
-│   ├── sales/             # Sales analytics page
-│   └── insights/          # AI insights page
+## 🧱 Project Structure
+
+```
+├── app/                    # App Router pages
+│   ├── layout.tsx         # Layout with navigation
+│   ├── page.tsx           # Main dashboard
+│   ├── sales/             # Sales analytics
+│   └── insights/          # Gemini-powered insights
 ├── components/
 │   ├── ui/                # shadcn/ui components
-│   ├── dashboard/         # Dashboard-specific components
-│   ├── app-sidebar.tsx    # Main navigation sidebar
-│   └── error-boundary.tsx # Error handling component
+│   ├── dashboard/         # Dashboard-specific UI
+│   ├── app-sidebar.tsx    # Sidebar navigation
+│   └── error-boundary.tsx # Error handler
 ├── lib/
-│   └── analytics-data.ts  # Data management and utilities
+│   └── analytics-data.ts  # Core analytics logic
 └── README.md
-\`\`\`
+```
 
-## 🎯 Key Components
+---
 
-### Dashboard Components
-- **MetricsGrid**: Key performance indicators with trend analysis
-- **ChartsSection**: Interactive revenue and user growth charts
-- **AIInsightsPanel**: AI-powered business recommendations
-- **RecentActivity**: Real-time user activity feed
+## 🧩 Key Components
 
-### Utility Classes
-- **AnalyticsService**: Centralized data management with caching
-- **PerformanceMonitor**: Performance tracking and optimization
-- **ErrorBoundary**: Graceful error handling and recovery
+### Dashboard
 
-## 🔧 Customization
+* **MetricsGrid** – Key indicators and trends
+* **ChartsSection** – User/revenue growth charts
+* **AIInsightsPanel** – Gemini-powered suggestions
+* **RecentActivity** – Live user activity feed
 
-### Adding New Metrics
-1. Update the `AnalyticsService` in `lib/analytics-data.ts`
-2. Create new metric cards in `components/dashboard/metrics-grid.tsx`
-3. Add corresponding chart visualizations
+### Utilities
 
-### Extending AI Insights
-1. Modify the insight generation logic in `ai-insights-panel.tsx`
-2. Add new insight types and analysis patterns
-3. Customize the confidence scoring system
+* **AnalyticsService** – Data management with caching
+* **PerformanceMonitor** – Tracks runtime performance
+* **ErrorBoundary** – Handles UI failures gracefully
 
-### Theme Customization
-- Modify `app/globals.css` for global styles
-- Update `tailwind.config.ts` for theme configuration
-- Customize component variants in shadcn/ui components
+---
+
+## 🎨 Customization Guide
+
+### ➕ Add New Metrics
+
+1. Add data to `AnalyticsService` in `lib/analytics-data.ts`
+2. Create metric cards in `components/dashboard/metrics-grid.tsx`
+3. Include matching chart visualizations
+
+### 🤖 Extend AI Capabilities
+
+1. Update logic in `AIInsightsPanel`
+2. Add new prompt types and analysis strategies
+3. Tune the confidence scoring system
+
+### 🎨 Theme Customization
+
+* Global styles: `app/globals.css`
+* Tailwind theme: `tailwind.config.ts`
+* Component variants: override in `shadcn/ui` as needed
+
+---
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically
 
-### Other Platforms
-The application is a standard Next.js app and can be deployed to any platform that supports Node.js.
+1. Push to GitHub
+2. Connect the repo on [vercel.com](https://vercel.com)
+3. Add your environment variables
+4. Enjoy automatic deployments
 
-## 📊 Performance Features
+### Other Hosting Options
 
-- **Intelligent Caching**: 5-minute TTL for API responses
-- **Lazy Loading**: Components load progressively
-- **Error Recovery**: Graceful fallbacks for all external dependencies
-- **Performance Monitoring**: Built-in timing and metrics tracking
+AnaMas is a standard Next.js app and works on any Node.js-compatible platform.
+
+---
+
+## ⚡ Performance Highlights
+
+* **Smart Caching** – 5-minute TTL for API responses
+* **Lazy Loading** – On-demand component loading
+* **Error Resilience** – Fallbacks for all external APIs
+* **Built-in Monitoring** – Performance logs and timing hooks
+
+---
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create your branch:
+   `git checkout -b feature/your-feature`
+3. Commit changes:
+   `git commit -m "Add: your message"`
+4. Push and open a PR
 
-## 📝 License
+---
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📄 License
 
-## 🙏 Acknowledgments
+Licensed under the MIT License. See `LICENSE` for more details.
 
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful component library
-- [Vercel AI SDK](https://sdk.vercel.ai/) for AI integration
-- [Recharts](https://recharts.org/) for chart visualizations
-- [Lucide](https://lucide.dev/) for icons
+---
 
+## 🙌 Acknowledgments
+
+* [shadcn/ui](https://ui.shadcn.com/) – UI component library
+* [Vercel AI SDK](https://sdk.vercel.ai/) – AI integration
+* [Gemini (Google AI)](https://deepmind.google/technologies/gemini) – Language model powering analytics
+* [Recharts](https://recharts.org/) – Charting library
+* [Lucide](https://lucide.dev/) – Icon pack
