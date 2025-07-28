@@ -144,3 +144,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Vercel AI SDK](https://sdk.vercel.ai/) for AI integration
 - [Recharts](https://recharts.org/) for chart visualizations
 - [Lucide](https://lucide.dev/) for icons
+
